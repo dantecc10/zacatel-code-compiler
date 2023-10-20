@@ -5,6 +5,8 @@ function checkSpecialWords(word) {
     const inicio = textarea.selectionStart;
     const fin = textarea.selectionEnd;
 
+    console.log("Start" + inicio + "\nEnd: " + fin);
+
     switch (word) {
         case "Inicio":
             textarea.value += ("\nFin");
