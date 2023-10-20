@@ -17,6 +17,9 @@ function checkLastWord(input) {
 
     // Obtiene la última palabra completa escrita
     const lastWord = words[words.length - 1];
+    if (lastWord == " ") {
+        const lastWord = words[words.length - 2];
+    }
 
     // Muestra la última palabra en un elemento HTML
     document.getElementById('lastWord').textContent = `Última palabra: ${lastWord}`;
