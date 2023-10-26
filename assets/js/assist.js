@@ -78,9 +78,8 @@ function countAppearances(word) {
 
 function countSpecialPairs(word1, word2) {
     if (countAppearances(word1) == countAppearances(word2)) {
-        return countAppearances(word1);
+        return [true, countAppearances(word1)];
     } else {
-        return false;
+        return [false, (countAppearances(word1) - countAppearances(word2))];
     }
-
 }
