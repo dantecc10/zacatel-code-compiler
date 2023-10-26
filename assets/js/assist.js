@@ -83,3 +83,20 @@ function countSpecialPairs(word1, word2) {
         return [false, (countAppearances(word1) - countAppearances(word2))];
     }
 }
+
+function getSelection(s) {
+    // Objetivo por defecto
+    target = document, getElementById('enter');
+
+    switch (s) {
+        case 't':
+            return target.value;
+            break;
+        case 'p1':
+            return target.value.substring(0, target.selectionStart);
+            break;
+        case 'p2':
+            return target.value.substring(target.selectionStart, (target.value.length - 1));
+            break;
+    }
+}
