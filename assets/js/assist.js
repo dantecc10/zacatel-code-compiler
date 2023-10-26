@@ -10,7 +10,7 @@ function checkSpecialWords(word) {
 
     console.log("Start" + inicio + "\nEnd: " + fin);
 
-    switch (word) {
+    switch (word) {    
         case "Inicio":
             textarea.value += ("\nFin");
             break;
