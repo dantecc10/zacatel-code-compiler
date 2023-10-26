@@ -65,19 +65,22 @@ function countAppearances(word) {
     var texto = objetivo.value;
     var contador = 0;
     palabras = texto.split(' ');
-    palabras = palabras.map(elemento => elemento.trim());
+    palabras = palabras.map(elemento => elemento.trim()); // Limpia el arreglo de palabras de los ' '
 
     for (var i = 0; i < palabras.length; i++) {
-        /*for (var j = 0; j < palabras[i].length; j++) {
-            if(palabras[i][j]==' '){
-
-            }
-        }*/
-
         if (palabras[i] == word) {
             contador++;
         }
     }
 
     return contador;
+}
+
+function countSpecialPairs(word1, word2) {
+    if (countAppearances(word1) == countAppearances(word2)) {
+        return countAppearances(word1);
+    } else {
+        return false;
+    }
+
 }
