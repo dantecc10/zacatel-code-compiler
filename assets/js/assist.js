@@ -27,10 +27,10 @@ function checkLastWord(input) {
 
     // Divide el texto en palabras utilizando un espacio en blanco como separador
     const words = text.split(' ');
-
+    words = words.map(elemento => elemento.trim()); // Limpia el arreglo de palabras de los ' '
     // Obtiene la última palabra completa escrita
     lastWord = words[words.length - 1];
-    if (lastWord == " ") {
+    if (lastWord == ' ') {
         lastWord = words[words.length - 2];
     }
 
