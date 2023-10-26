@@ -65,10 +65,19 @@ function countAppearances(word) {
     var texto = objetivo.value;
     var contador = 0;
     palabras = texto.split(' ');
+    palabras = palabras.map(elemento => elemento.trim());
+
     for (var i = 0; i < palabras.length; i++) {
+        /*for (var j = 0; j < palabras[i].length; j++) {
+            if(palabras[i][j]==' '){
+
+            }
+        }*/
+
         if (palabras[i] == word) {
             contador++;
         }
     }
+
     return contador;
 }
