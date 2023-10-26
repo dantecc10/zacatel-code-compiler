@@ -1,7 +1,10 @@
+var contadorReservadas = 1;
+
 function checkSpecialWords(word) {
     const textarea = document.getElementById('enter');
 
     // Guarda la posición actual del cursor
+    //const inicio = textarea.selectionStart;
     const inicio = textarea.selectionStart;
     const fin = textarea.selectionEnd;
 
@@ -55,4 +58,17 @@ function agregarSaltoDeLinea() {
 
     // Restaura la posición del cursor al final
     textarea.setSelectionRange(inicio, fin);
+}
+
+function countAppearances(word) {
+    var objetivo = document.getElementById('enter');
+    var texto = objetivo.value;
+    var contador = 0;
+    palabras = texto.split(' ');
+    for (var i = 0; i < palabras.length; i++) {
+        if (palabras[i] == word) {
+            contador++;
+        }
+    }
+    return contador;
 }
