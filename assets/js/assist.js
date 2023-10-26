@@ -86,7 +86,7 @@ function countSpecialPairs(word1, word2) {
 
 function getSelection(s) {
     // Objetivo por defecto
-    target = document, getElementById('enter');
+    target = document.getElementById('enter');
 
     switch (s) {
         case 't':
